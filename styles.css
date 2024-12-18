@@ -1,0 +1,526 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #0e0e0e;
+    color: #fff;
+}
+
+header {
+    background: #1a1a1a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Match the shadow of the navbar */
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f0a500;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Full screen height */
+    background-image: url("assets/Banner\ for\ login.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    position: relative;
+}
+
+
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay for better text readability */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Places content above the overlay */
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #f0a500;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #d48d00;
+    transform: scale(1.1);
+}
+
+
+.cta-btn {
+    background-color: #f0a500;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+    transform: scale(1.1);
+    background-color: #d48d00;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.service-card {
+    background: #222;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.hero {
+    background-attachment: fixed;
+}
+
+/* Updated Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    padding: 20px 30px; /* Adjust to match the header padding */
+    box-shadow: 0px 5px 15px rgba(1, 1, 0, 0.3); /* Ensure consistent shadow */
+    position: relative;
+    z-index: 1000;
+    border-radius: 15px; /* Rounded corners */
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar:hover {
+    background-color: #000000;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smoothens hover effect */
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar nav a::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #f0a500, #d48d00);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.navbar nav a:hover::before {
+    left: 0;
+}
+
+.navbar nav a:hover {
+    color: #000;
+    font-weight: bold;
+    transform: scale(1.05); /* Subtle scaling for hover effect */
+}
+
+/* Preventing hover vibration/exploding effect */
+.navbar nav a {
+    transform: scale(1); /* Ensure initial state is stable */
+}
+
+
+/* Centered Logo */
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: url('path/to/logo.png') no-repeat center center;
+    background-size: contain;
+}
+
+
+/* Banner for Sign In, Sign Up, and Forgot Password */
+.banner {
+    background-image: url("assets/Banner\ for\ login.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh; /* Adjust height for banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* Center the Forms */
+.auth-form {
+    max-width: 400px;
+    margin: -50px auto 50px; /* To adjust the form in the center */
+    text-align: center;
+    padding: 30px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.auth-form h1 {
+    font-size: 2.5rem;
+    color: #f0a500;
+    margin-bottom: 20px;
+}
+
+.auth-form input,
+.auth-form button {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.auth-form input {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Focus effect for inputs */
+.auth-form input:focus {
+    border-color: #f0a500;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(240, 165, 0, 0.5);
+}
+
+/* Button */
+.auth-form button {
+    background-color: #f0a500;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-form button:hover {
+    background-color: #d48d00;
+}
+
+.auth-form a {
+    color: #f0a500;
+    text-decoration: none;
+}
+
+
+/* Contact Form Section */
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.contact-form h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f0a500;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(240, 165, 0, 0.5);
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #f0a500;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #d48d00;
+}
+
+
+
+/* Tour Search Section */
+.tour-search {
+    background-color: #2e2e2e;
+    padding: 40px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.tour-search h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f0a500;
+}
+
+.search-box {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of elements when the screen is smaller */
+    gap: 20px; /* Adds space between form elements */
+    justify-content: center; /* Centers the form horizontally */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px; /* Ensures a minimum width for each input */
+}
+
+.input-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #f0a500;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    outline: none;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #f0a500;
+    box-shadow: 0px 0px 5px rgba(240, 165, 0, 0.5);
+}
+.input-group input#stops {
+    background-color: #333;
+    border: 2px solid #f0a500;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.input-group input#stops:focus {
+    box-shadow: 0 0 5px rgba(240, 165, 0, 0.5);
+    outline: none;
+}
+
+
+.search-btn {
+    background-color: #f0a500;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center; /* Centers the search button */
+}
+
+.search-btn:hover {
+    background-color: #d48d00;
+}
+
+
+/* Our Top Destinations Section */
+#destinations {
+    background: #2e2e2e;
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+#destinations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #f0a500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.destination-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.destination-card {
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.1);
+}
+
+.destination-card .info {
+    padding: 20px;
+    text-align: left;
+}
+
+.destination-card .info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f0a500;
+}
+
+.destination-card .info p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff; /* Primary color */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.btn.details {
+    background-color: #28a745; /* Specific color for "details" button */
+}
+
+.btn.details:hover {
+    background-color: #218838; /* Darker green on hover */
+}
