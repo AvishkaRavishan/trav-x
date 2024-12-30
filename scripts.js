@@ -156,3 +156,112 @@ function toggleRoundTripFields() {
         roundTripFields.style.display = "none";
     }
 }
+
+
+
+
+
+// Booking Button Ripple Effect
+document.getElementById('search-btn').addEventListener('click', function (e) {
+    const ripple = document.createElement('div');
+    ripple.classList.add('ripple-effect');
+    this.appendChild(ripple);
+
+    const rect = this.getBoundingClientRect();
+    ripple.style.left = `${e.clientX - rect.left}px`;
+    ripple.style.top = `${e.clientY - rect.top}px`;
+
+    setTimeout(() => ripple.remove(), 600); // Remove ripple after animation
+});
+
+// Add CSS for ripple effect
+const style = document.createElement('style');
+style.textContent = `
+    .ripple-effect {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: rgba(240, 165, 0, 0.6);
+        border-radius: 50%;
+        transform: scale(0);
+        animation: ripple-animation 0.6s ease-out;
+        pointer-events: none;
+    }
+    @keyframes ripple-animation {
+        to {
+            transform: scale(10);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
+
+
+// Smooth Scrolling
+document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+        });
+    });
+});
+
+const nodemailer = require('nodemailer');
+
+async function sendEmail(details) {
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'your-email@gmail.com',
+            pass: 'your-email-password',
+        },
+    });
+
+    const mailOptions = {
+        from: 'your-email@gmail.com',
+        to: 'recipient-email@gmail.com',
+        subject: 'New Booking Details',
+        text: `Booking Details:
+        Destination: ${details.destination}
+        Vehicle: ${details.vehicleType}
+        Date: ${details.travelDate}
+        Time: ${details.time}`,
+    };
+
+    await transporter.sendMail(mailOptions);
+}
+
+
+//image slideshow js
+let slideIndex = 0;
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 5000); // Change slide every 5 seconds
+}
+
+function changeSlide(n) {
+    let slides = document.getElementsByClassName("slide");
+    slides[slideIndex - 1].style.display = "none";
+    slideIndex += n;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    if (slideIndex < 1) {
+        slideIndex = slides.length;
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    showSlides();
+});

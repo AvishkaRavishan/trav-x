@@ -10,18 +10,7 @@
     <script src="topdes.js" defer></script>
 </head>
 <body>
-    <!-- Navbar -->
-    <header>
-        <div class="navbar">
-            <nav>
-                <a href="../index.php">Home</a>
-                <a href="../about.php">About</a>
-                <a href="../contact.php">Contact</a>
-                <a href="../sign-in.php">Sign In</a>
-            </nav>
-        </div>
-    </header>
-    
+
 
     <!-- Destination Content -->
     <main>

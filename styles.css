@@ -6,6 +6,8 @@ body {
     overflow-x: hidden;
     background-color: #0e0e0e;
     color: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+
 }
 
 header {
@@ -17,34 +19,115 @@ header {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Match the shadow of the navbar */
 }
 
-.navbar a {
-    color: #fff;
+* Style for the navbar and menu */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
     text-decoration: none;
-    margin: 0 15px;
-    transition: color 0.3s ease;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
 }
 
-.navbar a:hover {
-    color: #f0a500;
+.menu a:hover {
+    background-color: #f0a500;
+    border-radius: 5px;
 }
 
-/* Hero Section */
+/* For smaller screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 10;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 15px;
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+/* Hero Section with Slideshow */
 .hero {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     height: 100vh; /* Full screen height */
-    background-image: url("assets/Banner\ for\ login.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    animation: backgroundSlideshow 15s infinite; /* Add animation for the slideshow */
     color: #fff;
     position: relative;
 }
 
+/* Hero Section with Slideshow */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Full screen height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: backgroundSlideshow 18s infinite; /* Updated animation for six images */
+    color: #fff;
+    position: relative;
+}
 
+/* Hero Section with Slideshow */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Full screen height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: backgroundSlideshow 21s infinite; /* Updated animation for seven images */
+    color: #fff;
+    position: relative;
+}
 
+/* Dark overlay for better text readability */
 .hero::before {
     content: '';
     position: absolute;
@@ -52,13 +135,13 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay for better text readability */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* Places content above the overlay */
+    z-index: 2;
     max-width: 800px;
     padding: 20px;
 }
@@ -74,6 +157,61 @@ header {
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
+
+/* Keyframe animation for the slideshow with seven images */
+@keyframes backgroundSlideshow {
+    0% {
+        background-image: url("assets/bg 1.jpg");
+    }
+    14.28% {
+        background-image: url("assets/bg 2.jpg");
+    }
+    28.57% {
+        background-image: url("assets/bg 3.jpg");
+    }
+    42.85% {
+        background-image: url("assets/bg 4.jpg");
+    }
+    57.14% {
+        background-image: url("assets/bg 5.jpg");
+    }
+    71.42% {
+        background-image: url("assets/bg 6.jpg");
+    }
+    85.71% {
+        background-image: url("assets/bg 7.jpg");
+    }
+    100% {
+        background-image: url("assets/bg 1.jpg");
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        padding: 10px;
+    }
+}
+
+
 
 .cta-btn {
     background-color: #f0a500;
@@ -91,25 +229,11 @@ header {
     transform: scale(1.1);
 }
 
-
-.cta-btn {
-    background-color: #f0a500;
-    color: #fff;
-    padding: 15px 30px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.cta-btn:hover {
-    transform: scale(1.1);
-    background-color: #d48d00;
-}
-
 /* Content Sections */
 .content-section {
     padding: 100px 20px;
     text-align: center;
+    color: #ffffff;
 }
 
 .service-card {
@@ -126,9 +250,7 @@ header {
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
-.hero {
-    background-attachment: fixed;
-}
+
 
 /* Updated Navbar Styles */
 .navbar {
@@ -192,7 +314,6 @@ header {
     transform: scale(1); /* Ensure initial state is stable */
 }
 
-
 /* Centered Logo */
 .logo {
     position: absolute;
@@ -203,7 +324,6 @@ header {
     background: url('path/to/logo.png') no-repeat center center;
     background-size: contain;
 }
-
 
 /* Banner for Sign In, Sign Up, and Forgot Password */
 .banner {
@@ -284,7 +404,6 @@ header {
     text-decoration: none;
 }
 
-
 /* Contact Form Section */
 .contact-form {
     max-width: 600px;
@@ -338,12 +457,10 @@ header {
     background-color: #d48d00;
 }
 
-
-
 /* Tour Search Section */
 .tour-search {
     background-color: #2e2e2e;
-    padding: 40px 20px;
+    padding: 100px 100px;
     color: #fff;
     text-align: center;
 }
@@ -388,6 +505,7 @@ header {
     border-color: #f0a500;
     box-shadow: 0px 0px 5px rgba(240, 165, 0, 0.5);
 }
+
 .input-group input#stops {
     background-color: #333;
     border: 2px solid #f0a500;
@@ -401,7 +519,6 @@ header {
     box-shadow: 0 0 5px rgba(240, 165, 0, 0.5);
     outline: none;
 }
-
 
 .search-btn {
     background-color: #f0a500;
@@ -418,7 +535,6 @@ header {
 .search-btn:hover {
     background-color: #d48d00;
 }
-
 
 /* Our Top Destinations Section */
 #destinations {
@@ -523,4 +639,81 @@ footer {
 
 .btn.details:hover {
     background-color: #218838; /* Darker green on hover */
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slide image */
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Caption text */
+.slide-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Button hover effects */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Animation */
+.fade {
+    animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
 }
