@@ -1,50 +1,40 @@
-<?php
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sri Dalada Maligawa</title>
+    <title>Jaffna</title>
     <link rel="stylesheet" href="topdes.css">
     <script src="topdes.js" defer></script>
 </head>
 <body>
 
 
-    <!-- Destination Content -->
     <main>
         <section class="destination-content">
-            <h1>Sri Dalada Maligawa</h1>
-            <img src="../assets/dalada maligawa.jpg" alt="Sri Dalada Maligawa" class="destination-image">
+            <h1>Jaffna</h1>
+            <img src="../assets/jaffna.jpg" alt="Jaffna" class="destination-image">
             <p>
-                The Sri Dalada Maligawa, or Temple of the Sacred Tooth Relic, is a significant Buddhist site located in Kandy, Sri Lanka.
-                It houses the relic of Buddha's tooth and is a symbol of Sri Lankan heritage. This sacred temple attracts visitors from around
-                the globe who wish to experience its spiritual significance and stunning architecture.
+                Jaffna, located in northern Sri Lanka, is a hub of Tamil culture and history. Visit the iconic Jaffna Fort, 
+                Nallur Kandaswamy Temple, and indulge in the local cuisine.
             </p>
             <h3>Ratings: ★★★★☆ (4.5/5)</h3>
             <h4>How to Travel</h4>
             <p>
-                Book your trip with us! We provide comfortable vehicles for groups of all sizes and personalized itineraries.
-                Travel in luxury while experiencing the rich history and culture of Kandy. With our expert guides, you'll gain deeper insights into
-                the significance of this revered site.
+                Experience the rich heritage of Jaffna with our guided tours, tailored to showcase the best of the region.
             </p>
             <button class="btn" onclick="bookNow()">Book Now</button>
         </section>
-    </main>
+        <style>.destination-image {
+    width: 100%;
+    height: auto;
+    max-width: 1200px; /* Maximum width to prevent the image from becoming too large */
+    margin: 0 auto; /* Centers the image */
+    display: block; /* Makes sure the image behaves like a block element */
+}
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Travel Adventures. All Rights Reserved.</p>
-
-        </div>
-    </footer>
-
-    <style>
-
-        /* General styles */
-body {
+ /* General styles */
+ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -96,7 +86,24 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
+    .navbar a {
+        margin: 0.5rem 0;
+    }
+
+    .destination-content {
+        padding: 1rem;
+    }
+
+    .destination-image {
+        max-width: 90%;
+    }
+}
 
 @media (max-width: 480px) {
     .destination-image {
@@ -108,7 +115,13 @@ body {
         font-size: 0.9rem;
     }
 }
+</style>
+    </main>
 
-    </style>
+    <footer>
+        <div class="footer-content">
+        <p>© 2024 Sun Rock Tours | All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

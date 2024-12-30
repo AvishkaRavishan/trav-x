@@ -1,58 +1,39 @@
-<?php
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jetwing Saman Villas</title>
+    <title>Unawatuna</title>
     <link rel="stylesheet" href="topdes.css">
     <script src="topdes.js" defer></script>
 </head>
 <body>
-    <!-- Navbar -->
-    <header>
-        <div class="navbar">
-            <nav>
-                <a href="../index.php">Home</a>
-                <a href="../about.php">About</a>
-                <a href="../contact.php">Contact</a>
-                <a href="../sign-in.php">Sign In</a>
-            </nav>
-        </div>
-    </header>
-    
 
-    <!-- Destination Content -->
     <main>
         <section class="destination-content">
-            <h1>Jetwing Saman Villas</h1>
-            <img src="../assets/unawatuna.jpg" alt="Jetwing Saman Villas" class="destination-image">
+            <h1>Unawatuna</h1>
+            <img src="../assets/unawatuna.jpg" alt="Unawatuna" class="destination-image">
             <p>
-                Jetwing Saman Villas is a luxurious beachfront resort located in Unawatuna, Sri Lanka. With its tranquil atmosphere and stunning ocean views, 
-                it offers the perfect escape for relaxation and rejuvenation. The resort combines modern luxury with traditional Sri Lankan hospitality.
+                Unawatuna is one of Sri Lanka's most beautiful beach destinations, offering golden sands, crystal-clear waters, and vibrant coral reefs. 
+                It’s perfect for swimming, snorkeling, and enjoying sunsets.
             </p>
-            <h3>Ratings: ★★★★★ (5/5)</h3>
+            <h3>Ratings: ★★★★☆ (4.6/5)</h3>
             <h4>How to Travel</h4>
             <p>
-                Book your stay with us! Whether you're looking for a relaxing retreat or an adventure, we offer top-tier transportation to Jetwing Saman Villas 
-                and help you plan your perfect getaway.
+                Discover the serene beauty of Unawatuna with our comfortable travel packages, designed to suit all your needs.
             </p>
             <button class="btn" onclick="bookNow()">Book Now</button>
         </section>
-    </main>
+        <style>.destination-image {
+    width: 100%;
+    height: auto;
+    max-width: 1200px; /* Maximum width to prevent the image from becoming too large */
+    margin: 0 auto; /* Centers the image */
+    display: block; /* Makes sure the image behaves like a block element */
+}
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Travel Adventures. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <style>
-
-        /* General styles */
-body {
+ /* General styles */
+ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -133,7 +114,16 @@ body {
         font-size: 0.9rem;
     }
 }
+</style>
 
-    </style>
+
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+        <p>© 2024 Sun Rock Tours | All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

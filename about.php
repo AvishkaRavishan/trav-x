@@ -15,26 +15,27 @@
             <nav>
                 <a href="index.php">Home</a>
                 <a href="about.php">About</a>
-                <a href="my_booking.php">My Bookings</a>
 
-                <a href="sign-in.php">Sign In</a>
             </nav>
         </div>
     </header>
+
+    <section id="about" class="content-section">
+            <h2>About Us</h2>
+            <p>Welcome to <strong>Sun Rock Tours</strong>, where your travel dreams come to life!</p>
+            <p>We are dedicated to offering unforgettable travel experiences to both local adventurers and foreign explorers.</p>
+            <p>Whether you're looking for a scenic getaway, cultural journey, or peaceful escape, we're here to make it happen.</p>
+        </section>
 
 
 
 
     <main>
-        <section class="about">
-            <p></p>
-            <p></p>
-            <h1>About Us</h1>
-            <p>Welcome to our tourism website, where we offer unique travel experiences.</p>
-        </section>
-    </main>
     <footer>
         <p>© 2024 Tourism Website | All Rights Reserved.</p>
     </footer>
+    </main>
+
 </body>
+
 </html>
